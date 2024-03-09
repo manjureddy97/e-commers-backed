@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy"
+    content="default-src 'none'; script-src 'self'; img-src 'self'; style-src 'self';base-uri 'self';form-action 'self'
+    ">
+    <style>
+        /* Hide page by default */
+        html { display : none; }
+        </style>
+        <script>
+        if (self == top) {
+        // Everything checks out, show the page.
+        document.documentElement.style.display = 'block';
+        } else {
+        // Break out of the frame.
+        top.location = self.location;
+        }
+       
+        </script>
+        <script type="text/javascript">
+            function redirect() {
+              //  window.location.href = "https://dev-octa2.natsoft.io/";
+            }
+           
+        </script>
+</head>
+<body onload="redirect()">
+    <h1 style="text-align: center;margin-left: 25%;margin-right: 25%;margin-top: 25%; font-family:calibri">
+        Welcome to REST API Templates</h1>
+
+        <img src="data:image/png;base64,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"/>
+</body>
+</html> 

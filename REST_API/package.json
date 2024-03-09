@@ -1,0 +1,47 @@
+{
+  "name": "rest_api",
+  "version": "1.0.0",
+  "description": "Middleware created for NodeJs",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "K Gopi Krishna (gpkrishna52@gmail.com)"
+  },
+  "keywords": [
+    "rest",
+    "api"
+  ],
+  "author": "K GOPI KRISHNA",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "generate-password": "^1.7.1",
+    "helmet": "^7.0.0",
+    "html-tablify": "^2.0.4",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.29.4",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "node-json-db": "^2.3.0",
+    "nodejs-base64-converter": "^1.0.5",
+    "nodemailer": "^6.9.7",
+    "qrcode": "^1.5.3",
+    "speakeasy": "^2.0.0",
+    "underscore": "^1.13.6",
+    "uuid": "^9.0.1",
+    "validator": "^13.11.0",
+    "winston": "^3.11.0"
+  }
+}
