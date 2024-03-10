@@ -34,28 +34,23 @@ const { checkToken, ip_whitelist } = require("../auth/authenticate");
  * @param password as alphaNumeric
  **/
 router.post("/prod", async (req, res) => {
-  //try {
+ // try {
+    let params = req.body;
 
     product_model.get_proudcts(function (error, resp) {
-
       if (error) {
         return res.json({
           responseCode: global.config.default_error_code,
           responseData: error,
           responseDesc: global.config.default_error_message,
         });
-
-      }
-      else {
-
+      } else {
         return res.json({
           responseCode: global.config.default_success_code,
           responseData: resp,
           responseDesc: global.config.default_success_message,
         });
-
       }
-
     });
 
  /*  } catch (error) {
@@ -64,7 +59,41 @@ router.post("/prod", async (req, res) => {
       responseData: "Required Inputs are missing",
       responseDesc: global.config.default_error_message,
     });
-  } */
+  }
+ */});
+
+
+
+router.post("/prodId", async (req, res) => {
+  try {
+    const  { prodcutId} = req.body;
+
+    //validation
+    
+
+    product_model.get_proudctsId(prodcutId, function (error, resp) {
+      if (error) {
+        return res.json({
+          responseCode: global.config.default_error_code,
+          responseData: error,
+          responseDesc: global.config.default_error_message,
+        });
+      } else {
+        return res.json({
+          responseCode: global.config.default_success_code,
+          responseData: resp,
+          responseDesc: global.config.default_success_message,
+        });
+      }
+    });
+
+  } catch (error) {
+    return res.json({
+      responseCode: global.config.default_error_code,
+      responseData: "Required Inputs are missing",
+      responseDesc: global.config.default_error_message,
+    });
+  }
 });
 
 

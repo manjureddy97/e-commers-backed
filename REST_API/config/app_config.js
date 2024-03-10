@@ -35,7 +35,8 @@ var config = {
     },   
     
     products: {
-      get_prodcuts: 'select * from product_details pd;'
+      get_prodcuts: 'select * from product_details pd;',
+      get_productId:`Call GET_PRODUCT(?)`
     },
     
   },

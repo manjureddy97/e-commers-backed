@@ -19,7 +19,27 @@ module.exports = {
     //let params = [id, _email, _tfaJson, userId ];
     //let testqry = mysql.format(query, params);   
   //  global.logger.info(testqry);
+  /* let { id, _email, _tfaJson, userId } = params;
+  let queryParams = [id, _email, _tfaJson, userId]; */
+
     select_query(query, (error, results, fields) => {
+      if (error) {
+        global.logger.info(error);
+        return callBack(error.sqlMessage);
+      }
+      console.log(results);
+      global.logger.info(results);
+      return callBack(null,results);
+    });
+  },
+
+  get_proudctsId: (prodcutId , callBack) => {        
+    let query = sqlConfig.get_productId;
+    console.log(query);
+    let params = [prodcutId ]; 
+    let testqry = mysql.format(query, params);  
+
+    select_query(testqry, (error, results, fields) => {
       if (error) {
         global.logger.info(error);
         return callBack(error.sqlMessage);
